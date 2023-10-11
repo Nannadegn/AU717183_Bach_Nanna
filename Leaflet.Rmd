@@ -1,0 +1,188 @@
+---
+title: "Leaflet tasks"
+output: html_document
+date: "2023-10-10"
+---
+
+# Task 1: Create a Danish equivalent of AUSmap with esri layers, 
+# but call it DANmap
+
+popup2 = c("Copenhagen", "Odense", "Aarhus")
+
+leaflet() %>%                                 # create a map widget by calling the library
+  addProviderTiles("Esri.WorldPhysical") %>%  # add Esri World Physical map tiles
+  addAwesomeMarkers(lng = c(12.57, 10.4, 10.21),      # add layers, specified with longitude for 3 points
+                    lat = c(55.68, 55.4, 56.16),      # and latitude for 3 points
+                    popup = popup)      
+
+leaflet() %>%
+  addTiles() %>%                              # add default OpenStreetMap map tiles
+  addProviderTiles("Esri.WorldImagery",       # add custom Esri World Physical map tiles
+                   options = providerTileOptions(opacity=0.5)) %>%     # make the Esri tile transparent
+  setView(lng = 10.21076, lat = 56.15674, zoom = 10)      
+
+leaflet() %>% 
+  addTiles() %>% 
+  setView( lng = 10.21, lat = 56.16, zoom = 5 ) %>%  # let's use setView to navigate to our area
+  addProviderTiles("Esri.WorldPhysical", group = "Physical") %>% 
+  addProviderTiles("Esri.WorldImagery", group = "Aerial") %>% 
+  addProviderTiles("MtbMap", group = "Geo") %>% 
+  
+addLayersControl(                                 # we are adding layers control to the maps
+  baseGroups = c("Geo","Aerial", "Physical"),
+  options = layersControlOptions(collapsed = T))
+
+leaflet() %>% 
+  setView(10.21076, 56.15674, zoom = 13) %>%
+  addTiles()  # checking I am in the right area
+
+l_dk <- leaflet() %>%   # assign the base location to an object
+  setView(10.21076, 56.15674, zoom = 13)
+
+esri <- grep("^Esri", providers, value = TRUE)
+
+for (provider in esri) {
+  l_dk <- l_dk %>% addProviderTiles(provider, group = provider)
+}
+
+AARHUSMAP <- l_dk %>%
+  addLayersControl(baseGroups = names(esri),
+                   options = layersControlOptions(collapsed = FALSE)) %>%
+  addMiniMap(tiles = esri[[1]], toggleDisplay = TRUE,
+             position = "bottomright") %>%
+  addMeasure(
+    position = "bottomleft",
+    primaryLengthUnit = "meters",
+    primaryAreaUnit = "sqmeters",
+    activeColor = "#3D535D",
+    completedColor = "#7D4479") %>% 
+  htmlwidgets::onRender("
+                        function(el, x) {
+                        var myMap = this;
+                        myMap.on('baselayerchange',
+                        function (e) {
+                        myMap.minimap.changeLayer(L.tileLayer.provider(e.name));
+                        })
+                        }") %>% 
+  addControl("", position = "topright")
+
+AARHUSMAP
+
+########## ADD DATA TO LEAFLET
+
+library(tidyverse)
+library(googlesheets4)
+library(leaflet)
+
+
+
+# In this section you will manually create machine-readable spatial
+# data from GoogleMaps: 
+
+### First, go to https://bit.ly/CreateCoordinates1
+### Enter the coordinates of your favorite leisure places in Denmark 
+      # extracting them from the URL in googlemaps, adding name and type of monument.
+      # Remember to copy the coordinates as a string, as just two decimal numbers separated by comma. 
+
+# Caveats: Do NOT edit the grey columns! They populate automatically!
+
+### Second, read the sheet into R. You will need gmail login information. 
+      # watch the console, it may ask you to authenticate or put in the number 
+      # that corresponds to the account you wish to use.
+
+# Libraries
+library(tidyverse)
+library(googlesheets4)
+library(leaflet)
+
+# Read in a Google sheet
+places <- read_sheet("https://docs.google.com/spreadsheets/d/1PlxsPElZML8LZKyXbqdAYeQCDIvDps2McZx1cTVWSzI/edit#gid=124710918",
+                     range = "DigitalMethods" , 
+                     col_types = "cccnncnc")
+glimpse(places)
+
+# load the coordinates in the map and check: are any points missing? Why?
+leaflet() %>% 
+  addTiles() %>% 
+  addMarkers(lng = places$Longitude, 
+             lat = places$Latitude,
+             popup = places$Description)
+
+leaflet() %>%
+  addTiles() %>%                              # add default OpenStreetMap map tiles
+  addProviderTiles("Esri.WorldImagery",       # add custom Esri World Physical map tiles
+                   options = providerTileOptions(opacity=0.5)) %>%     # make the Esri tile transparent
+  setView(lng = 10.21076, lat = 56.15674, zoom = 10)   
+
+#########################################################
+
+
+# Task 2: Read in the googlesheet data you and your colleagues 
+# populated with data into the DANmap object you created in Task 1.
+
+# Libraries
+library(tidyverse)
+library(googlesheets4)
+library(leaflet)
+
+# Read in a Google sheet
+places <- read_sheet("https://docs.google.com/spreadsheets/d/1PlxsPElZML8LZKyXbqdAYeQCDIvDps2McZx1cTVWSzI/edit#gid=124710918",
+                     range = "DigitalMethods" , 
+                     col_types = "cccnncnc")
+glimpse(places)
+
+# load the coordinates in the map and check: are any points missing? Why?
+AARHUSMAP%>% 
+  addMarkers(lng = places$Longitude, 
+             lat = places$Latitude,
+             popup = places$Description, 
+             clusterOptions = markerClusterOptions())
+
+leaflet() %>%
+  addTiles() %>%                              # add default OpenStreetMap map tiles
+  addProviderTiles("Esri.WorldImagery",       # add custom Esri World Physical map tiles
+                   options = providerTileOptions(opacity=0.5)) %>%     # make the Esri tile transparent
+  setView(lng = 10.21076, lat = 56.15674, zoom = 10)   
+
+
+# Task 3: Can you cluster the points in Leaflet? Google "clustering options in Leaflet"
+
+AARHUSMAP%>% 
+  addMarkers(lng = places$Longitude, 
+             lat = places$Latitude,
+             popup = places$Description, 
+             clusterOptions = markerClusterOptions())
+
+
+# Task 4: Look at the map and consider what it is good for and what not.
+
+## The map is a good visualization, there allows for the integration of geographic data and presenting it visually on the map.
+## Leaftlet is primarily designed for 2D maps, so it is not ideal for creating advanced 3D maps or visualizations. 
+## Cluster function 
+
+# Task 5: Find out how to display notes and classifications in the map.
+
+places <- na.omit(places) # Remove rows with missing values
+
+# Get unique values in the "Stars1_5" column
+unique_values <- unique(places$Stars1_5)
+
+# Define a color palette with enough colors to cover all unique values
+color_palette <- colorFactor(
+  palette = c("red", "blue", "green", "purple"),  # Add colors as needed
+  domain = unique_values
+)
+
+# Use the color palette in addCircleMarkers
+AARHUSMAP %>%
+  leaflet() %>%
+  addTiles() %>%
+  addCircleMarkers(
+    data = places,
+    radius = ifelse(places$Stars1_5 == "stars", 10, 56),
+    color = ~color_palette(Stars1_5),
+    stroke = FALSE,
+    fillOpacity = 0.5
+  )
+
+
