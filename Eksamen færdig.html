@@ -1,0 +1,39 @@
+title: "Abbeys in Denmark"
+output: html_document
+date: "2023-12-19"
+
+# Library 
+```{r}
+library("readxl")
+install.packages("readxl")
+library(ggplot2)
+library(tidyverse)
+library(dplyr)
+install.packages("ggplot2")
+install.packages("dplyr")
+install.packages("readr")
+library(readr)
+install.packages("rmarkdown")
+
+```
+
+# A Histogram of the Start year for the Abbeys 
+```{r}
+df <- Abbeys$`Start år`
+hist(Abbeys$`Start år`)
+```
+
+# A Histogram of the End year for the Abbeys 
+```{r}
+df <- Abbeys$`Slut år`
+hist(Abbeys$`Slut år`)
+```
+
+# Here you can see where the Abbeys is placed a which year they came 
+```{r}
+Abbeys %>% 
+  ggplot(aes(x=Abbeys$Beliggenhed, y = Abbeys$`Start år`))+
+  geom_jitter()+
+  theme_classic()+
+  labs(x="Location", y="Year")
+```
