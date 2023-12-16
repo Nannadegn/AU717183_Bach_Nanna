@@ -1,0 +1,100 @@
+﻿Ref nr;Navn;Beliggenhed ;Orden;Start år;Slut år;Synlige rester 
+1;Alling;Jylland;Benedektiner;1250;1536;Jordvolde
+2;Antvorskov;Sjælland;Johannitermunke;1164;1536;Ruiner 
+3;Asmild;Jylland;Agustinernonner ;1167;1536;Kirken 
+4;Assens ;Fyn;Karmeliterbrødre;1500;1530;Intet 
+5;Asserbo;Sjælland;Karteusermunke;1163;1170;Intet 
+6;Børglum;Jylland;Præmonstratenserkanikker;1209;1536;Hele anlægget 
+7;Dalum ;Fyn;Benediktinernonner;1200;1529;Kirken 
+8;Eskilsø;Sjælland;Augustinerkanikker ;1150;1176;Ruiner 
+9;Esrum ;Sjælland;Cisterciensermunke;1151;1536;Sydøstlig tilbygning 
+10;Essenbæk;Jylland;Benediktinermunke;1179;1529;Intet 
+11;Fåborg;Fyn;Helligåndbrødre og -nonner;1477;1540;Kirken 
+12;Gavnø;Sjælland;Dominikanernonner;1403;1536;Kirken 
+13;Glenstrup;Jylland;Benediktinermunke;1125;1445;Kirken 
+14;Grinderslev;Jylland;Augustinerkanikker ;1150;1536;Kirken 
+15;Gudum;Jylland;Benediktinernonner;1250;1536;Kirken 
+16;Haderslev ;Jylland;Dominikanerbrødre;1250;1527;Intet 
+17;Halsted;Lolland;Benediktinermunke ;1290;1536;Kirken 
+18;Helsingør;Sjælland;Dominikanerbrødre;1441;1536;Intet 
+19;Helsingør;Sjælland;Franciskanerbrødre ;1420;1537;Intet 
+20;Helsingør;Sjælland;Karmeliterbrødre;1430;1536;Hele anlægget 
+21;Holbæk;Sjælland;Dominikanerbrødre;1275;1535;Syd- og Vestfløjen  
+22;Holme;Jylland;Cisterciensermunke;1172;1536;Hele anlægget 
+23;Horsens;Jylland;Franciskanerbrødre ;1261;1532;Kirken 
+24;Horsens;Jylland;Johannitermunke;1375;1536;Intet 
+25;Hundslund;Jylland;Benediktinernonner;1250;1535;Kirken og Østfløjen
+26;Kalundborg;Sjælland ;Franciskanerbrødre ;1240;1532;Intet 
+27;Kalvø;Jylland;Cisterciensermunke;1168;1172;Ruiner 
+28;Knardrup;Sjælland;Cisterciensermunke;1326;1536;Intet 
+29;Kolding;Jylland;Franciskanerbrødre ;1288;1530;Intet 
+30;København;Sjælland;Franciskanerbrødre ;1238;1530;Murværk
+31;København;Sjælland;Helligåndbrødre og -nonner;1474;1530;Vestfløjen
+32;København ;Sjælland;Franciskanernonner ;1497;1535;Intet 
+33;Køge;Sjælland;Franciskanerbrødre ;1484;1531;Intet 
+34;Løgum;Jylland;Cisterciensermunke;1173;1536;Kirken og Østfløjen
+35;Mariager;Jylland;Birgittinermunke og -nonner;1446;1536;Kirken
+36;Maribo;Lolland;Birgittinermunke og -nonner;1416;1551;Kirken og ruiner
+37;Nakskov;Lolland;Helligåndbrødre og -nonner;1470;1536;Intet 
+38;Nonnebakken;Fyn;Benediktinernonner;1175;1200;Intet 
+39;Nykøbing Falster;Falster;Franciskanerbrødre ;1419;1532;Kirken og Vestfløjen
+40;Nykøbing Mors;Jylland;Johannitermunke;1370;1536;Møllehus
+41;Nysted;Lolland;Franciskanerbrødre ;1286;1538;Intet 
+42;Næstved ;Sjælland;Franciskanerbrødre ;1242;1532;Intet 
+43;Næstved ;Sjælland;Dominikanerbrødre;1265;1536;Intet 
+44;Odense;Fyn;Franciskanerbrødre ;1279;1537;Hele anlægget 
+45;Odense;Fyn;Johannitermunke;1275;1536;Kirken
+46;Odense;Fyn;Franciskanernonner ;1522;1538;Intet 
+47;Odense;Fyn;Benediktinermunke;1100;1536;Kirken
+48;Odense;Fyn;Dominikanerbrødre;1240;1536;Intet 
+49;Præstø;Sjælland;Antoniterbrødre;1470;1536;Kirken
+50;Randers;Jylland;Benediktinernonner;1125;1428;Intet 
+51;Randers;Jylland;Franciskanerbrødre ;1236;1530;Intet 
+52;Randers;Jylland;Helligåndbrødre og -nonner;1485;1532;Kirken
+53;Ribe;Jylland;Benediktinernonner;1170;1532;Intet 
+54;Ribe;Jylland;Franciskanerbrødre ;1232;1537;Intet 
+55;Ribe;Jylland;Johannitermunke;1300;1537;Intet 
+56;Ribe;Jylland;Dominikanerbrødre;1228;1531;Hele anlægget 
+57;Ring;Jylland;Benediktinernonner;1175;1536;Intet 
+58;Ringsted;Sjælland;Benediktinermunke;1134;1536;Kirken
+59;Roskilde;Sjælland;Franciskanerbrødre ;1237;1537;Intet 
+60;Roskilde;Sjælland;Dominikanernonner;1263;1527;Intet 
+61;Roskilde;Sjælland;Franciskanernonner ;1256;1537;Intet 
+62;Roskilde;Sjælland;Dominikanerbrødre;1231;1536;Intet 
+63;Roskilde;Sjælland;Cisterciensernonner;1160;1536;Kirken 
+64;Sebber;Jylland;Benediktinernonner;1250;1536;Kirken
+65;Seem;Jylland;Birgittinermunke og -nonner;1150;1173;Intet 
+66;Næstved ;Sjælland;Benediktinermunke;1135;1536;Kirken og Østfløjen
+67;Skælskør;Sjælland;Karmeliterbrødre;1418;1532;Intet 
+68;Slangerup;Sjælland;Cisterciensernonner;1175;1536;Intet 
+69;Sminge;Jylland;Cisterciensernonner;1165;1166;Intet 
+70;Sorø;Sjælland;Cisterciensermunke;1142;1536;Kirken
+71;Stubber;Jylland;Benediktinermunke;1150;1536;Rester af Vestfløjen 
+72;Svendborg;Fyn;Franciskanerbrødre ;1236;1537;Intet 
+73;Sæby;Jylland;Karmeliterbrødre;1460;1536;Kirken
+74;Tvilum;Jylland;Augustinerkanikker ;1247;1536;Kirken
+75;Tvis;Jylland;Cisterciensermunke;1163;1536;Markering
+76;Tønder;Jylland;Franciskanerbrødre ;1238;1530;Intet 
+77;Vejerslev;Jylland;Benediktinermunke;1150;1225;Kirken
+78;Vejle;Jylland;Dominikanerbrødre;1325;1530;En teglovn
+79;Vang;Jylland;Benediktinermunke;1100;1168;Kirken
+80;Vestervig;Jylland;Augustinerkanikker ;1110;1536;Kirken
+81;Viborg;Jylland;Dominikanerbrødre;1240;1529;Kirken
+82;Viborg;Jylland;Franciskanerbrødre ;1235;1530;Østfløjen
+83;Viborg;Jylland;Johannitermunke;1275;1536;Intet 
+84;Viborg;Jylland;Augustinerkanikker ;1125;1440;Intet 
+85;Viborg;Jylland;Augustinernonner;1150;1440;Intet 
+86;Vissing;Jylland;Benediktinernonner;1200;1450;Intet 
+87;Vitskøl;Jylland;Cisterciensermunke;1158;1536;Hele anlægget med rester af kirken 
+88;Voer;Jylland;Benediktinermunke;1150;1532;Vandmølle
+89;Vordingborg;Sjælland;Dominikanerbrødre;1253;1265;Intet 
+90;Vrejlev;Jylland;Præmonstratensernonner;1253;1536;Hele anlægget 
+91;Æbelholdt;Sjælland;Agustinerkannikker;1175;1536;Markering
+92;Ø Kloster;Jylland;Benediktinernonner;1175;1536;Kirken og ruiner
+93;Øm ;Jylland;Cisterciensermunke;1172;1536;Ruiner 
+94;Ørslev;Jylland;Benediktinernonner;1175;1536;Hele anlægget 
+95;Ålborg;Jylland;Franciskanerbrødre ;1250;1530;Intet 
+96;Ålborg;Jylland;Helligåndbrødre og -nonner;1451;1530;Hele anlægget undtagen kirken 
+97;Ålborg;Jylland;Benediktinernonner;1125;1527;Rester af kirken 
+98;Århus;Jylland;Dominikanerbrødre;1240;1530;Hele anlægget undtagen østfløjen
+99;Århus;Jylland;Karmeliterbrødre;1461;1531;Intet 
